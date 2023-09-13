@@ -10,6 +10,10 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    author:{
+        type: String,
+        required: true
+    },
     description: {
         type: String
     },
@@ -20,6 +24,9 @@ const articleSchema = new mongoose.Schema({
     createdAt :{
         type: Date,
         default: Date.now
+    },
+    image: {
+        type:Array
     },
     slug:{
         type: String,

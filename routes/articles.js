@@ -37,8 +37,12 @@ function saveArticleAndRedirect(path) {
     return async (req,res) => {
         let article = req.article
         article.title = req.body.title,
+        article.author = req.body.author,
         article.description = req.body.description,
-        article.markdown = req.body.markdown
+        article.markdown = req.body.markdown,
+        article.image[0] = req.body.image1,
+        article.image[1] = req.body.image2,
+        article.image[2] = req.body.image3
     
         try{
             article = await article.save()

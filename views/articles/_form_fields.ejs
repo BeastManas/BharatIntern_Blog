@@ -3,12 +3,22 @@
     <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
   </div>
   <div class="form-group">
+    <label for="author">Author Name</label>
+    <input required value="<%= article.author %>" type="text" name="author" id="author" class="form-control">
+  </div>
+  <div class="form-group">
     <label for="description">Description</label>
     <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
   </div>
   <div class="form-group">
     <label for="markdown">Markdown</label>
     <textarea required name="markdown" id="markdown" class="form-control"><%= article.markdown %></textarea>
+  </div>
+  <div class="form-group">
+    <label for="image">Image Links</label>
+    <input value="<%= article.image[0] %>" type="text" name="image1" id="image1" class="form-control" >
+    <input value="<%= article.image[1] %>" type="text" name="image2" id="image2" class="form-control" >
+    <input value="<%= article.image[2] %>" type="text" name="image3" id="image3" class="form-control" >
   </div>
   
   <a href="/" class="btn btn-secondary">Cancel</a>
